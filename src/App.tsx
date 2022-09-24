@@ -5,6 +5,8 @@ import Path from 'path';
 import uploadFileToBlob, { isStorageConfigured } from './azure-storage-blob';
 
 const storageConfigured = isStorageConfigured();
+const sasConfigured = isSASConfigured();
+const nameConfigured = isNAMEConfigured();
 
 const App = (): JSX.Element => {
   // all blobs in container
@@ -90,6 +92,8 @@ const App = (): JSX.Element => {
       <hr />
       {storageConfigured && blobList.length > 0 && DisplayImagesFromContainer()}
       {!storageConfigured && <div>Storage is not configured.</div>}
+      {!sasConfigured && <div>SAS is not configured.</div>}
+      {!nameConfigured && <div>NAME is not configured.</div>}
     </div>
   );
 };

@@ -16,6 +16,15 @@ export const isStorageConfigured = () => {
 }
 // </snippet_isStorageConfigured>
 
+// Testfunktionen
+export const isSASConfigured = () => {
+  return (!sasToken) ? false : true;
+}
+export const isNAMEConfigured = () => {
+  return (!storageAccountName) ? false : true;
+}
+
+
 // <snippet_getBlobsInContainer>
 // return list of blobs in container to display
 const getBlobsInContainer = async (containerClient: ContainerClient) => {
