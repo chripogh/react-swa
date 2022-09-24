@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Path from 'path';
-import uploadFileToBlob, { isStorageConfigured } from './azure-storage-blob';
+import uploadFileToBlob, { isStorageConfigured, isSASConfigured, isNAMEConfigured } from './azure-storage-blob';
 
 const storageConfigured = isStorageConfigured();
 const sasConfigured = isSASConfigured();
